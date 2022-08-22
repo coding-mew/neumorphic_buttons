@@ -1,0 +1,59 @@
+:root {
+  font-size: 62.5%;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  background-color: aliceblue;
+  font-size: 1em;
+}
+/* POSITIONING BOXES */
+.container {
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  margin: 50vh;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  transition: all 3s;
+  /* in parent-element: transition provokes slow positioning? */
+}
+/* STYLING BOXES */
+.container > div {
+  width: 100px;
+  height: 100px;
+  border: 1px solid aliceblue;
+  border-radius: 10px;
+  box-shadow: 4px 4px 3px #565677c2, -30px -30px 60px #ffff;
+}
+/* POSITIONING CONTENT IN BOXES */
+.cut,
+.copy,
+.paste {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* SMOOTH TRANSITION ON HOVER */
+.cut:hover,
+.copy:hover,
+.paste:hover {
+  box-shadow: inset 2px 2px 3px #565677c2, -30px -30px 60px #ffff;
+  /* TRANSITION FOR RED CONTENT */
+  color: red;
+  transition: 3s ease-in;
+}
+
+/* ORGANIZING ICONS, AVOID COLOR-SWITCH */
+.fa-solid {
+  color: black !important;
+  padding: 5px;
+  font-size: 1.5em;
+}
+
+
+
